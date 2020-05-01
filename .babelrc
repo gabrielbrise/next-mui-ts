@@ -1,0 +1,19 @@
+{
+  "plugins": [
+    [
+      "styled-components",
+      { "ssr": true, "displayName": true, "preprocess": false }
+    ],
+    [
+      "module-resolver",
+      {
+        "root": ["./src"],
+        "extensions": ["*.ts", "*.tsx", "*.json"],
+        "alias": {
+          "": "./src"
+        }
+      }
+    ]
+  ],
+  "presets": ["next/babel"]
+}
