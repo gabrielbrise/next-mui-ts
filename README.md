@@ -1,4 +1,4 @@
-#next-mui-ts
+# next-mui-ts
 
 This is a boilerplate for ReactJS projects using the following set of frameworks/library:
 
@@ -6,12 +6,12 @@ This is a boilerplate for ReactJS projects using the following set of frameworks
 - Material-UI Components
 - styled-components
 
-##TODO
+## TODO
 
 - [ ] create npm project and cli command for boilerplate initialization
 - [ ] example usage of primary features
 
-##FEATURES
+## FEATURES
 
 - Typescript enabled
 - Module resolver configured to import anywhere inside .src/ relative to .src/
