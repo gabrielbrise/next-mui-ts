@@ -1,13 +1,32 @@
-import React from "react";
+import React, { forwardRef, Ref } from "react";
 import Link from "next/link";
 import Button from "@material-ui/core/Button";
 
-const ButtonLink = ({ href, hrefAs, className, children }) => (
-  <>
-    <Link href={href} as={hrefAs}>
-      <a className={className}>{children}</a>
-    </Link>
-  </>
+interface IButtonLink {
+  href?: string;
+  hrefAs?: string;
+  className?: string;
+  children: unknown;
+}
+
+const ButtonLink = forwardRef(
+  ({ href, hrefAs, className, children }: IButtonLink, ref?: Ref<any>) => {
+    if (!href)
+      return (
+        <div ref={ref} className={className}>
+          {children}
+        </div>
+      );
+    return (
+      <>
+        <Link href={href} as={hrefAs}>
+          <a ref={ref} {...ref} className={className}>
+            {children}
+          </a>
+        </Link>
+      </>
+    );
+  }
 );
 
 // https://material-ui.com/demos/buttons/#third-party-routing-library
